@@ -1,7 +1,7 @@
 package geometry;
 
-public class useCaseTwo {
-
+public class useCaseThree {
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//variables
@@ -13,22 +13,23 @@ public class useCaseTwo {
 	        int x4 = (int)(Math.floor(Math.random()*10));
 	        int y3 = (int)(Math.floor(Math.random()*10));
 	        int y4 = (int)(Math.floor(Math.random()*10));
-	        //computation
+	        //computaion
 	        int sumOfSqrs = ((x1-x2)*(x1-x2))+((y1-y2)*(y1-y2));
 	        int sumOfSqrsTwo = ((x3-x4)*(x3-x4))+((y3-y4)*(y3-y4));
 	        double lengthOne=Math.sqrt(sumOfSqrs);
 	        double lengthTwo=Math.sqrt(sumOfSqrsTwo);
 	        Double length1 = new Double(lengthOne);
 	        Double length2 = new Double(lengthTwo);
-	        System.out.println(length1.equals(length2));
-	        boolean CompareLengthOne = length1.equals(length2);
-	        if(CompareLengthOne) {
-	        	System.out.println("Both the Lines are Equal");
+	        int compareLines =  length1.compareTo(length2);
+	        if(compareLines >0) {
+	        	System.out.println("Length of the First Line is greater than the Second");
+	        }
+	        else if(compareLines<0) {
+	        	System.out.println("Length of the Second Line is greater than the first");
 	        }
 	        else {
-	        	System.out.println("Both Lines are not Equal");
+	        	System.out.println("Both Lines are Equal");
 	        }
-	        
 	        
 		    
 
